@@ -1,4 +1,4 @@
-schema_version: 2
+﻿schema_version: 2
 kind: md-quiz-repo
 quizzes:
   - path: quizzes/common-test-2025/quiz.md
@@ -6,3 +6,4 @@ quizzes:
   - path: quizzes/ai-workstyle-50/quiz.md
   - path: quizzes/tech-media-ops-intern-screening/quiz.md
   - path: quizzes/parser-smoke-5/quiz.md
+  - path: quizzes/dakewe-java-test-2026/quiz.md

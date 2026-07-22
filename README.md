@@ -1,4 +1,4 @@
-# Shire Quiz Repository
+﻿# Shire Quiz Repository
 
 本仓库已按 `skills/quiz-repo-spec` 重构为可同步的 `md-quiz` 仓库。
 
@@ -20,6 +20,8 @@
 │   │   └── assets/
 │   └── tech-media-ops-intern-screening/
 │       └── quiz.md
+│   └── dakewe-java-test-2026/
+│       └── quiz.md
 └── skills/
 ```
 
@@ -30,6 +32,7 @@
 - `personality-type-5d-80`: 人格类型测试（五维版·80题）
 - `parser-smoke-5`: 系统解析测试问卷（5题）
 - `tech-media-ops-intern-screening`: 技术类自媒体运营实习生招聘初筛问卷
+- `dakewe-java-test-2026`: 达科威Java笔试题2026
 
 每份 `quiz.md` 的 Front Matter 现支持 `tags`，用于分类、检索和后续筛选。
 其中 `common-test-2025` 与 `tech-media-ops-intern-screening` 属于招聘/筛选型混合问卷。
