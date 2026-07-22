@@ -3,7 +3,7 @@ id: dakewe-java-test-2026
 title: 达科威Java笔试题2026
 description: |
   面向Java开发候选人的技术能力测评，覆盖Spring Boot、Redis、Docker、Spring Cloud、MySQL、Elasticsearch、RabbitMQ、MongoDB、JVM等核心技术栈。
-  本试卷共 24 题，其中单选 11 题、多选 4 题、简答 9 题，预计 36 分钟完成。
+  本试卷共 24 题，其中单选 11 题、多选 4 题、简答 9 题，预计 60 分钟完成。
 tags: [java, spring-boot, redis, docker, spring-cloud, mysql, elasticsearch, rabbitmq, mongodb, recruitment]
 schema_version: 2
 format: qml-v2
@@ -30,7 +30,7 @@ llm:
     考生回答：{{answer}}
 ---
 
-## Q1 [single] (5) {answer_time=1m}
+## Q1 [single] (5) {answer_time=60s}
 
 以下哪项是 Spring Boot 自动配置的核心注解？
 
@@ -43,7 +43,7 @@ llm:
 `@EnableAutoConfiguration` 是 Spring Boot 自动配置的核心注解，它通过 `@Import` 导入 `AutoConfigurationImportSelector`，实现根据类路径中的依赖自动配置 Bean。`@SpringBootApplication` 是组合注解，包含 `@EnableAutoConfiguration`，但其本身不是一个单一职责的自动配置注解。
 [/rubric]
 
-## Q2 [single] (5) {answer_time=1m15s}
+## Q2 [single] (5) {answer_time=75s}
 
 高并发场景下，Redis 的哪种数据结构适合实现分布式锁？
 
@@ -56,7 +56,7 @@ llm:
 Redis 的 String 类型配合 `SET key value NX EX timeout` 命令可实现原子性的分布式锁。`NX` 保证只在键不存在时设置，`EX` 设置过期时间防止死锁。Hash、Set、ZSet 不具备这种原子性锁机制。
 [/rubric]
 
-## Q3 [single] (5) {answer_time=1m}
+## Q3 [single] (5) {answer_time=60s}
 
 Docker Compose 中用于定义服务依赖的关键字是？
 
@@ -69,7 +69,7 @@ Docker Compose 中用于定义服务依赖的关键字是？
 `depends_on` 用于声明服务之间的启动依赖关系，控制服务启动顺序。`links` 是旧版 Legacy 网络的容器链接方式，`volumes` 用于数据卷挂载，`environment` 用于设置环境变量。
 [/rubric]
 
-## Q4 [single] (5) {answer_time=2m}
+## Q4 [single] (5) {answer_time=120s}
 
 以下哪种设计模式适合在 Spring Cloud 中实现服务熔断？
 
@@ -82,7 +82,7 @@ Docker Compose 中用于定义服务依赖的关键字是？
 Spring Cloud 中的熔断器（如 Hystrix、Resilience4j）通过代理模式实现：为服务调用生成代理对象，在代理中注入熔断逻辑（如统计失败率、打开/半开/关闭状态切换），从而实现故障隔离和快速失败。
 [/rubric]
 
-## Q5 [single] (5) {answer_time=1m15s}
+## Q5 [single] (5) {answer_time=75s}
 
 MySQL 主从复制中，从库通过什么机制同步主库数据？
 
@@ -95,7 +95,7 @@ MySQL 主从复制中，从库通过什么机制同步主库数据？
 MySQL 主从复制流程：主库将数据变更写入 Binlog → 从库的 I/O 线程拉取 Binlog 并写入 Relay Log → 从库的 SQL 线程读取 Relay Log 并重放。因此从库通过 Relay Log 来同步主库数据，而非直接使用 Binlog。
 [/rubric]
 
-## Q6 [single] (5) {answer_time=1m}
+## Q6 [single] (5) {answer_time=60s}
 
 医院系统中，Elasticsearch 最可能用于以下哪种场景？
 
@@ -108,7 +108,7 @@ MySQL 主从复制流程：主库将数据变更写入 Binlog → 从库的 I/O 
 Elasticsearch 基于倒排索引，擅长全文检索和模糊搜索，适合非结构化的病历文本搜索场景。挂号记录适合关系型数据库，库存更新需要事务保障，财务统计更适合 OLAP 引擎。
 [/rubric]
 
-## Q7 [multiple] (5) {answer_time=2m}
+## Q7 [multiple] (5) {answer_time=120s}
 
 以下哪些是保证 RabbitMQ 消息可靠性的手段？
 
@@ -121,7 +121,7 @@ Elasticsearch 基于倒排索引，擅长全文检索和模糊搜索，适合非
 保证 RabbitMQ 消息可靠性的核心手段：持久化队列（Queue 和 Message 设置为 durable，防止 Broker 重启丢失）、手动 ACK（消费者处理完成后显式确认，避免消息丢失）、生产者确认（Publisher Confirm 机制，确保消息成功写入 Broker）。消息过期时间（TTL）用于消息的生命周期管理，不是可靠性保障手段。
 [/rubric]
 
-## Q8 [multiple] (5) {answer_time=2m}
+## Q8 [multiple] (5) {answer_time=120s}
 
 Spring Cloud 中可用于服务发现的组件有哪些？
 
@@ -134,7 +134,7 @@ Spring Cloud 中可用于服务发现的组件有哪些？
 以上选项均为常见的服务发现组件。Nacos 是阿里巴巴开源的服务发现与配置中心；Eureka 是 Netflix 的服务发现组件；Consul 是 HashiCorp 的分布式服务发现和配置工具；ZooKeeper 也可用作服务注册中心（通过临时节点实现）。
 [/rubric]
 
-## Q9 [multiple] (5) {answer_time=2m}
+## Q9 [multiple] (5) {answer_time=120s}
 
 哪些场景适合使用 MongoDB？
 
@@ -147,7 +147,7 @@ Spring Cloud 中可用于服务发现的组件有哪些？
 MongoDB 适合存储半结构化/非结构化的文档数据。设备日志数据量大、结构灵活，适合 MongoDB 的文档模型；电子病历字段不固定、嵌套多，也适合文档存储。药品库存需要事务和一致性保障，医生排班属于强关系数据，更适合关系型数据库。
 [/rubric]
 
-## Q10 [multiple] (5) {answer_time=2m}
+## Q10 [multiple] (5) {answer_time=120s}
 
 以下哪些是 Docker 镜像优化策略？
 
@@ -216,7 +216,7 @@ Feign 客户端默认支持服务发现和负载均衡。
 Spring Cloud OpenFeign 默认集成了 Ribbon（或 Spring Cloud LoadBalancer），配合服务注册中心（如 Nacos、Eureka），可以自动完成服务发现和客户端负载均衡，无需手动配置。
 [/rubric]
 
-## Q16 [short] {max=2, answer_time=1m15s}
+## Q16 [short] {max=2, answer_time=75s}
 
 Spring Boot 中读取配置文件的注解有哪些？（写出至少一个）
 
@@ -228,7 +228,7 @@ Spring Boot 中读取配置文件的注解有哪些？（写出至少一个）
    - 满分描述: 同时写出两个注解并简要说明区别（`@Value` 用于单个属性注入，`@ConfigurationProperties` 用于批量绑定）
 [/rubric]
 
-## Q17 [short] {max=2, answer_time=1m15s}
+## Q17 [short] {max=2, answer_time=75s}
 
 防止缓存穿透的 Redis 方案是什么？
 
@@ -238,7 +238,7 @@ Spring Boot 中读取配置文件的注解有哪些？（写出至少一个）
    - 部分得分: 提到其他方案（缓存空值、互斥锁等）但未提及布隆过滤器
 [/rubric]
 
-## Q18 [short] {max=2, answer_time=1m15s}
+## Q18 [short] {max=2, answer_time=75s}
 
 Docker 中跨主机容器通信的网络解决方案是什么？
 
@@ -248,7 +248,7 @@ Docker 中跨主机容器通信的网络解决方案是什么？
    - 部分得分: 提到其他方案（如 Macvlan、Weave、Calico 等）但未提及 Overlay
 [/rubric]
 
-## Q19 [short] {max=2, answer_time=1m15s}
+## Q19 [short] {max=2, answer_time=75s}
 
 医院系统接口幂等性设计的常用方案有哪些？（写出至少一个）
 
@@ -258,7 +258,7 @@ Docker 中跨主机容器通信的网络解决方案是什么？
    - 部分得分: 提出其他幂等方案（如乐观锁、状态机等）但非核心方案
 [/rubric]
 
-## Q20 [short] {max=2, answer_time=1m15s}
+## Q20 [short] {max=2, answer_time=75s}
 
 JVM 调优参数 `-Xmx` 表示什么？
 
@@ -267,7 +267,7 @@ JVM 调优参数 `-Xmx` 表示什么？
    - 满分描述: 回答"最大堆内存"或"JVM 堆的最大大小"，并能简要说明其作用（控制 Java 应用可使用的最大堆内存，防止内存溢出）
 [/rubric]
 
-## Q21 [short] {max=5, answer_time=6m}
+## Q21 [short] {max=5, answer_time=360s}
 
 如何设计医院患者数据的 MySQL 分表方案？
 
@@ -286,7 +286,7 @@ JVM 调优参数 `-Xmx` 表示什么？
    - 部分得分: 未提及扩展性
 [/rubric]
 
-## Q22 [short] {max=5, answer_time=6m}
+## Q22 [short] {max=5, answer_time=360s}
 
 简述 Spring Cloud Gateway 如何实现医院系统的接口鉴权。
 
@@ -305,7 +305,7 @@ JVM 调优参数 `-Xmx` 表示什么？
    - 部分得分: 仅描述基本流程
 [/rubric]
 
-## Q23 [short] {max=5, answer_time=6m}
+## Q23 [short] {max=5, answer_time=360s}
 
 为什么医院私有化部署推荐使用 Docker Compose？至少列出 3 点原因。
 
@@ -320,7 +320,7 @@ JVM 调优参数 `-Xmx` 表示什么？
    - 满分描述: 额外提到水平扩展（scale）、滚动更新、或与 Kubernetes 的衔接等高级特性
 [/rubric]
 
-## Q24 [short] {max=15, answer_time=16m}
+## Q24 [short] {max=15, answer_time=960s}
 
 在多线程环境下，设计实现一个医院药品库存管理类，满足以下要求：
 
