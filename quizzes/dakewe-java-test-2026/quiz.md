@@ -1,4 +1,4 @@
-﻿---
+---
 id: dakewe-java-test-2026
 title: 达科威Java笔试题2026
 description: |
