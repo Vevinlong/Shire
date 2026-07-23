@@ -1,6 +1,6 @@
 ---
 id: dakewe-java-test-2026
-title: 达科威Java笔试题2026
+title: 达科为Java笔试题2026
 description: |
   面向Java开发候选人的技术能力测评，覆盖Spring Boot、Redis、Docker、Spring Cloud、MySQL、Elasticsearch、RabbitMQ、MongoDB、JVM等核心技术栈。
   本试卷共 24 题，其中单选 11 题、多选 4 题、简答 9 题，预计 60 分钟完成。
