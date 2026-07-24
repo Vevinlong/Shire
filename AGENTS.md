@@ -36,6 +36,7 @@
 - `single` 与 `multiple` 题使用 `## Qn [type] (points)`，`short` 题使用 `## Qn [short] {max=points, ...}`。
 - `single` 若使用 `{scoring=traits}`，则表示无正确答案的量表题；这类题统一使用 `(0)`，且不得使用 `*`。
 - `single` 或 `multiple` 若使用 `{scoring=completion}`，则表示作答计分题；这类题必须使用正分值，不设置正确答案，不使用 `*`，也不得写选项级 `traits`。
+- Front Matter 支持 `exam_mode` 字段，控制答题模式：`linear`（逐题，默认）、`full`（全卷通览）。
 - `short` 题必须包含 `[rubric]...[/rubric]`。
 - `answer_time` 使用 `s`、`m`、`h`，并保持在 parser 允许范围内。
 - 首题前和末题后如需展示欢迎图或结束图，只放单独一张 Markdown 图片。

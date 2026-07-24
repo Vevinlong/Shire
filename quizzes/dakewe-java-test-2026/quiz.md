@@ -7,7 +7,7 @@ description: |
 tags: [java, spring-boot, redis, docker, spring-cloud, mysql, elasticsearch, rabbitmq, mongodb, recruitment]
 schema_version: 2
 format: qml-v2
-exam_mode: review
+exam_mode: full
 question_count: 24
 question_counts:
   single: 11
