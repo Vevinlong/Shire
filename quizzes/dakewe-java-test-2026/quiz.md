@@ -321,7 +321,7 @@ JVM 调优参数 `-Xmx` 表示什么？
    - 满分描述: 额外提到水平扩展（scale）、滚动更新、或与 Kubernetes 的衔接等高级特性
 [/rubric]
 
-## Q24 [short] {max=15, answer_time=16m}
+## Q24 [code] {max=15, answer_time=16m, lang=java}
 
 在多线程环境下，设计实现一个医院药品库存管理类，满足以下要求：
 
